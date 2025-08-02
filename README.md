@@ -41,6 +41,8 @@ This app demonstrates **multiple table relationships**:
 
 ![Register](register.png)
 
+![Home](home.png)
+
 ![Account Settings](account-settings.png)
 
 ![Edit Post](edit-post.png)
