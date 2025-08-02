@@ -37,19 +37,19 @@ This app demonstrates **multiple table relationships**:
 
 ## 📸 Screenshots
 
-![Login](myblog_screenshots/login.png)
+![Login](login.png)
 
-![Register](myblog_screenshots/register.png)
+![Register](register.png)
 
-![Account Settings](myblog_screenshots/account-settings.png)
+![Account Settings](account-settings.png)
 
-![Edit Post](myblog_screenshots/edit-post.png)
+![Edit Post](edit-post.png)
 
-![New Post](myblog_screenshots/new-post.png)
+![New Post](new-post.png)
 
-![Post Details](myblog_screenshots/post-details.png)
+![Post Details](post-details.png)
 
-![Your Posts](myblog_screenshots/your-posts.png)
+![Your Posts](your-posts.png)
 
 ## 🧪 Tech Stack
 
