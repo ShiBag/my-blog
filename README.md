@@ -55,7 +55,7 @@ This app demonstrates **multiple table relationships**:
 
 | Layer        | Tech                           |
 |-------------|---------------------------------|
-| Backend      | Spring Boot, Spring MVC         |
+| Backend      | Spring Boot, Spring MVC, Spring Security         |
 | Frontend     | Thymeleaf, HTML, Bootstrap      |
 | Database     | MySQL / H2                      |
 | ORM          | Spring Data JPA + Hibernate     |
