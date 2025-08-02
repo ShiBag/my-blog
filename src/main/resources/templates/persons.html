@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Persons</title>
+</head>
+<body>
+<h1>Persons</h1>
+
+<a href="/persons/create">Create New Person</a>
+<br><br>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person : ${persons}">
+        <td th:text="${person.personId}"></td>
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.username}"></td>
+        <td>
+            <a th:href="@{/persons/update/{id}(id=${person.personId})}">Edit</a> |
+            <a th:href="@{/persons/delete/{id}(id=${person.personId})}" 
+               onclick="return confirm('Are you sure you want to delete this person?')">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back to Home</a>
+</body>
+</html>

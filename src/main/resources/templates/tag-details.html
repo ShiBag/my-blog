@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${tag.tagName}"></title>
+</head>
+<body>
+    <h1 th:text="${tag.tagName}"></h1>
+
+    <h3>Posts with this tag:</h3>
+    <ul>
+        <li th:each="post : ${tag.asscPosts}">
+            <a th:href="@{/posts/{id}(id=${post.postId})}" th:text="${post.postName}"></a>
+        </li>
+    </ul>
+
+    <a th:href="@{/tags}">Back to Tags</a>
+</body>
+</html>

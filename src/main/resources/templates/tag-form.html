@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${tag.tagId == null} ? 'Create Tag' : 'Edit Tag'"></title>
+</head>
+<body>
+<h1 th:text="${tag.tagId == null} ? 'Create Tag' : 'Edit Tag'"></h1>
+
+<form th:action="@{${tag.tagId == null} ? '/tags/create' : '/tags/update/' + ${tag.tagId}}" 
+      th:object="${tag}" method="post">
+    
+    <label>Tag Name:</label>
+    <input type="text" th:field="*{tagName}" required/><br/>
+
+    <button type="submit" th:text="${tag.tagId == null} ? 'Create' : 'Update'"></button>
+</form>
+
+<a href="/tags">Back to Tag List</a>
+</body>
+</html>

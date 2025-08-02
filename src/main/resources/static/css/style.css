@@ -1,0 +1,158 @@
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+.form-container {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.welcome-msg {
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #343a40;
+}
+
+.nav-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Card */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Date text */
+.post-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Pagination */
+.pagination .active .page-link {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border-color: #007bff !important;
+}
+
+.post-details-container {
+    max-width: 960px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.post-card h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.post-card p {
+    font-size: 1.1em;
+    margin: 12px 0;
+    color: #555;
+}
+
+.tags {
+    margin-top: 8px;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #e3e3e3;
+    color: #333;
+    padding: 6px 14px;
+    margin: 4px 6px 4px 0;
+    border-radius: 30px;
+    font-size: 0.9em;
+}
+
+.post-content {
+    white-space: pre-line;
+    color: #444;
+    margin-top: 16px;
+    line-height: 1.6;
+    font-size: 1.05em;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}

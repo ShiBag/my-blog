@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .account-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .form-control {
+            border-radius: 10px;
+        }
+        .btn-primary {
+            border-radius: 10px;
+        }
+        .success-message {
+            color: green;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div th:replace="fragments :: navbar"></div>
+
+<div class="container">
+    <div class="account-container">
+        <h2 class="mb-4 text-center">Account Settings</h2>
+
+        <div th:if="${param.success}">
+            <div class="alert alert-success" role="alert">
+                Account updated successfully!
+            </div>
+        </div>
+
+        <form th:action="@{/account/update}" th:object="${user}" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" th:field="*{name}" class="form-control" id="name" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" th:field="*{username}" class="form-control" id="username" required />
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="form-label">New Password</label>
+                <input type="password" th:field="*{password}" class="form-control" id="password" placeholder="Leave blank to keep current" />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Update Account</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

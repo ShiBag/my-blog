@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${category.categoryName}"></title>
+</head>
+<body>
+    <h1 th:text="${category.categoryName}"></h1>
+
+    <h3>Posts under this category:</h3>
+    <ul>
+        <li th:each="post : ${category.asscPosts}">
+            <a th:href="@{/posts/{id}(id=${post.postId})}" th:text="${post.postName}"></a>
+        </li>
+    </ul>
+
+    <a th:href="@{/categories}">Back to Categories</a>
+</body>
+</html>

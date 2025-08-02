@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+<h1>Categories</h1>
+
+<a href="/categories/create">Create New Category</a>
+<br><br>
+
+<div th:if="${errorMessage}">
+    <p style="color:red" th:text="${errorMessage}"></p>
+</div>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category : ${categories}">
+        <td th:text="${category.categoryId}"></td>
+        <td th:text="${category.categoryName}"></td>
+        <td>
+            <a th:href="@{/categories/update/{id}(id=${category.categoryId})}">Edit</a> |
+            <a th:href="@{/categories/delete/{id}(id=${category.categoryId})}"
+               onclick="return confirm('Deleting this category will fail if posts exist! Continue?')">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back to Home</a>
+</body>
+</html>

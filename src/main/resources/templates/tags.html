@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tags</title>
+</head>
+<body>
+<h1>Tags</h1>
+
+<a href="/tags/create">Create New Tag</a>
+<br><br>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tag Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tag : ${tags}">
+        <td th:text="${tag.tagId}"></td>
+        <td th:text="${tag.tagName}"></td>
+        <td>
+            <a th:href="@{/tags/update/{id}(id=${tag.tagId})}">Edit</a> |
+            <a th:href="@{/tags/delete/{id}(id=${tag.tagId})}"
+               onclick="return confirm('Are you sure you want to delete this tag?')">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back to Home</a>
+</body>
+</html>

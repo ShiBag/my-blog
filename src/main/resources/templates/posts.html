@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+<h1>Posts</h1>
+
+<a href="/posts/create">Create New Post</a>
+<br><br>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Post Name</th>
+        <th>Category</th>
+        <th>Author</th>
+        <th>Tags</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="post : ${posts}">
+        <td th:text="${post.postId}"></td>
+        <td th:text="${post.postName}"></td>
+        <td th:text="${post.asscPostCategory.categoryName}"></td>
+        <td th:text="${post.author.name}"></td>
+        <td>
+            <span th:each="tag : ${post.asscTags}" th:text="${tag.tagName} + ' '"></span>
+        </td>
+        <td>
+            <a th:href="@{/posts/update/{id}(id=${post.postId})}">Edit</a> |
+            <a th:href="@{/posts/delete/{id}(id=${post.postId})}"
+               onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/">Back to Home</a>
+</body>
+</html>

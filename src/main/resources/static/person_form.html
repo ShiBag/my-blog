@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${person.personId != null} ? 'Edit Author' : 'Add Author'">Author Form</title>
+</head>
+<body>
+<div th:replace="fragments :: navbar"></div>
+
+<h2 th:text="${person.personId != null} ? 'Edit Author' : 'Add Author'"></h2>
+
+<form th:action="@{${person.personId != null} ? '/persons/update/' + ${person.personId} : '/persons/save'}"
+      method="post" th:object="${person}">
+    <label>Name:</label>
+    <input type="text" th:field="*{name}" required/>
+    <br/><br/>
+    <label>Username:</label>
+    <input type="text" th:field="*{username}" required/>
+    <br/><br/>
+    <label>Password:</label>
+    <input type="password" th:field="*{password}" required/>
+    <br/><br/>
+    <button type="submit">Save</button>
+</form>
+
+<div th:replace="fragments :: footer"></div>
+</body>
+</html>
