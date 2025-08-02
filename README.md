@@ -60,7 +60,6 @@ This app demonstrates **multiple table relationships**:
 | Database     | MySQL / H2                      |
 | ORM          | Spring Data JPA + Hibernate     |
 | Build Tool   | Maven                           |
-| Java Version | 17+                             |
 
 ---
 
@@ -86,8 +85,11 @@ http://localhost:8080
 
 
 ✨ Author
+
 👨‍💻 Developed by Shivam Baghel
-📫 Contact: shivambaghelaug.@gmail.com
+
+📫 Contact: shivambaghelaug@gmail.com
+
 LinkedIn: https://www.linkedin.com/in/shivam-baghel-897935220/
 
 
